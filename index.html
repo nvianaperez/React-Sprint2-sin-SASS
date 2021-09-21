@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS via CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <!-- Bootstrap CSS via download-->
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <!-- *********** NAVBAR ***********-->
+
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="container-fluid d-inline-flex justify-content-between">
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="images/NV logo 2.png" class="rounded img-fluid" alt="logo">
+                <!--responsive image img-fluid max-width:100% height:auto-->
+            </a>
+
+            <!-- Toggler / Collapsible Button -->
+            <button class="navbar-toggler text-secondary" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse flex-grow-3" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3">
+                        <!-- DUDA DROPDOWN NO SE ABRE -->
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button"
+                                id="dropdownAboutMe" data-toggle="dropdown" aria-expanded="false">
+                                About me
+                            </a>
+                            <ul class="dropdown-menu" area-labelledby="dropdownAboutMe">
+                                <li><a class="dropdown-item" href="#">CV</a></li>
+                                <li><a class="dropdown-item" href="#">Link2</a></li>
+                                <li><a class="dropdown-item" href="#">Link3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link disabled text-secondary" href="#">Collaborations</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <!-- DUDA DROPDOWN NO SE ABRE -->
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button"
+                                id="dropdownPortfolio" data-toggle="dropdown" aria-expanded="false">
+                                Portfolio
+                            </a>
+                            <ul class="dropdown-menu" area-labelledby="dropdownPortfolio">
+                                <!-- <h6 class="dropdown-header">Bootstrap</h6> -->
+                                <li><a class="dropdown-item" href="#">Port01</a></li>
+                                <li><a class="dropdown-item" href="#">Port02</a></li>
+                                <!-- <hr class="dropdown-divider" />
+                                <h6 class="dropdown-header">React</h6> -->
+                                <li><a class="dropdown-item" href="#">Port03</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Modal Container-->
+            <div class="modal-container d-flex flex-column">
+                <!-- Button trigger Modal LOG IN -->
+                <button type="button" class="btn btn-outline-secondary mx-1 my-1 flex-fill" data-toggle="modal"
+                    data-target="#login">
+                    <span class="rounded-xs"></span>
+                    Log in
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginContent"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="loginContent">Log in</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>Email:</p>
+                                <p>Need and account?<a class="sign-up px-2" href="#">Sign up</a></p>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="email">Email address:</label>
+                                        <input type="email" class="form-control" placeholder="Enter email" id="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" placeholder="Enter password"
+                                            id="pwd">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox"> Remember me
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success">Log in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button trigger Modal CONTACT -->
+                <button type="button" class="btn btn-outline-secondary mx-1 my-1 flex-fill" data-toggle="modal"
+                    data-target="#contact">
+                    <span class="rounded-xs"></span>
+                    Contact
+                </button>
+                <!-- Modal CONTACT ME -->
+                <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactContent"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="contactContent">Contact me</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Full name:</label>
+                                        <input type="text" class="form-control" placeholder="Name" id="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" placeholder="Email" id="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message:</label>
+                                        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ***********JUMBOTRON / HERO ************-->
+
+    <!-- CÓMO CONSIGO QUE EN XS <H4> SE MUEVA ARRIBA OCUPANDO LAS 12 COL? -->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container-fluid pt-3 text-secondary d-inline-flex justify-content-between">
+            <img src="images/Nuria Viana - cv.jpg"
+                class="nv-photo img-fluid rounded-circle align-self-center mr-auto px-1" alt="Nuria Viana photo">
+            <h4 class="main-text flex-grow-2 p-4 align-text-center">Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit. Architecto voluptates non assumenda eligendi. Nobis, repellendus.</h4>
+            <div class="rrss d-flex flex-column align-self-center ml-auto px-3">
+                <a class="linkedin" href="https://www.linkedin.com/in/nuria-viana-b9abb0145/">
+                    <ion-icon name="logo-linkedin" class="logos-rrss text-secondary"></ion-icon>
+                </a>
+                <a class="github" href="https://github.com/nvianaperez">
+                    <ion-icon name="logo-github" class="logos-rrss text-secondary"></ion-icon>
+                </a>
+                <a class="twitter" href="https://twitter.com/nurvipe?s=09">
+                    <ion-icon name="logo-twitter" class="logos-rrss text-secondary"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- *********** CAROUSEL ************-->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="container-fluid w-100">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner w-100">
+                <div class="carousel-item active w-100">
+                    <img src="images/carousel-av.jpg" class="carousel-img img-fluid mx-auto" alt="Santa Agnès">
+                </div>
+                <div class="carousel-item w-100">
+                    <img src="images/carousel-av.jpg" class="carousel-img img-fluid mx-auto" alt="Santa Agnès">
+                </div>
+                <div class="carousel-item w-100">
+                    <img src="images/carousel-av.jpg" class="carousel-img img-fluid mx-auto" alt="Santa Agnès">
+                </div>
+                <div class="carousel-item w-100">
+                    <img src="images/carousel-av.jpg" class="carousel-img img-fluid mx-auto" alt="Santa Agnès">
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- *********** SECTION grid Bootstrap ************-->
+
+    <div id="section" class="section container-fluid w-100">
+        <div id="section-title" class="section-title row w-100">
+            <div class="col-12">
+                <h2 class="section-title mw-100 h-25 mx-auto py-4 text-center font-weight-bolder">Collaborations
+                </h2>
+            </div>
+        </div>
+        <div id="section-body" class="section-body container-fluid my-0 mb-4">
+            <div id="articles" class="articles row container-fluid">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="article my-1">
+                        <img src="images/carousel-japan.jpeg"
+                            class="article-img img-fluid max-widht:100% height=auto" alt="Japan">
+                        <footer class="blockquote-footer text-white">From www.turismo-japon.es</footer>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="article my-1">
+                        <img src="images/carousel-japan.jpeg"
+                            class="article-img img-fluid max-widht:100% height=auto" alt="Japan">
+                        <footer class="blockquote-footer text-white">From www.turismo-japon.es</footer>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="article my-1">
+                        <img src="images/carousel-japan.jpeg"
+                            class="article-img img-fluid max-widht:100% height=auto" alt="Japan">
+                        <footer class="blockquote-footer text-white">From www.turismo-japon.es</footer>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="article my-1">
+                        <img src="images/carousel-japan.jpeg"
+                            class="article-img img-fluid max-widht:100% height=auto" alt="Japan">
+                        <footer class="blockquote-footer text-white">From www.turismo-japon.es</footer>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="article my-1">
+                        <img src="images/carousel-japan.jpeg"
+                            class="article-img img-fluid max-widht:100% height=auto" alt="Japan">
+                        <footer class="blockquote-footer text-white">From www.turismo-japon.es</footer>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="article my-1">
+                        <img src="images/carousel-japan.jpeg"
+                            class="article-img img-fluid max-widht:100% height=auto" alt="Japan">
+                        <footer class="blockquote-footer text-white">From www.turismo-japon.es</footer>
+                    </div>
+                </div>
+            </div>
+            <div id="aside" class="aside row container-fluid">
+                <div class="col-12">
+                    <div class="tag d-flex flex-column justify-content-start align-items-center">
+                        <!-- justify-content-start alineación sobre eje principal que es column.
+                        ¿por qué no se coloca al principio de la columna?-->
+                        <h4 class="title-tag">#Tags</h4>
+                        <a href="#" class="aside-links text-secondary">Events</a>
+                        <a href="#" class="aside-links text-secondary">Inspiration</a>
+                        <a href="#" class="aside-links text-secondary">Nature</a>
+                        <a href="#" class="aside-links text-secondary">Work for love</a>
+                        <a href="#" class="aside-links text-secondary">Moments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *********** FOOTER ************-->
+
+    <div id="footer" class="footer container-fluid bg-secondary text-white text-center pt-3 my-0 w-100">
+        <p>2021 All Rights Reserved By Nuria Viana</p>
+
+
+        <!-- Option: Separate Popper and Bootstrap JS via CDN -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <!-- scripts de Bootstrap descargados -->
+        <!-- <script src="js/popper.min.js"></script>
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> -->
+
+    
+</body>
+
+</html>
